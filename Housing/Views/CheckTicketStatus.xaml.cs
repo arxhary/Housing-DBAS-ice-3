@@ -36,7 +36,7 @@ namespace Housing.Views
         {
             try
             {
-
+                lstbxStatus.Items.Clear();
                 int unitID = Convert.ToInt32(cmbUnitID.Text);
 
                 List<ResidentTicket> lstTicketStatus = db.ResidentTickets.Where(x => x.UnitId == unitID).ToList();

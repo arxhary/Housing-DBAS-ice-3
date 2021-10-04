@@ -42,25 +42,32 @@ namespace Housing.Views
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            int unitID = Convert.ToInt32(cmbUnitID.Text);
+            try {
+                int unitID = Convert.ToInt32(cmbUnitID.Text);
 
-            List<Ticket> lstTickets = db.Tickets.ToList();
-            List<ResidentTicket> lstTicketStatus = db.ResidentTickets.Where(x => x.UnitId == unitID).ToList();
+                List<Ticket> lstTickets = db.Tickets.ToList();
+                List<ResidentTicket> lstTicketStatus = db.ResidentTickets.Where(x => x.UnitId == unitID).ToList();
 
 
-            foreach (var t in lstTickets)
-            {
-                foreach(var i in lstTicketStatus)
+                foreach (var t in lstTickets)
                 {
-                    if(t.TicketId == i.TicketId && i.UnitId == unitID)
+                    foreach (var i in lstTicketStatus)
                     {
-                        i.TicketStatus = cmbStatus.Text;
-                        db.SaveChanges();
-                        MessageBox.Show("Updated Application status.");
-                        this.Close();
+                        if (t.TicketId == i.TicketId && i.UnitId == unitID)
+                        {
+                            i.TicketStatus = cmbStatus.Text;
+                            db.SaveChanges();
+                            MessageBox.Show("Updated Application status.");
+                            this.Close();
+                        }
                     }
                 }
             }
+            catch
+            {
+                MessageBox.Show("No unit id selected");
+            }
+            
         }
 
         private void btnCheck_Click(object sender, RoutedEventArgs e)
