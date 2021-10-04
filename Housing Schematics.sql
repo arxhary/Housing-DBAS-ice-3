@@ -26,3 +26,4 @@ TicketStatus VARCHAR(25),
 FOREIGN KEY(UnitID) REFERENCES Resident(UnitID),
 FOREIGN KEY(TicketID) REFERENCES Tickets(TicketID),
 );
+ 
