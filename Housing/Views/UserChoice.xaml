@@ -1,0 +1,23 @@
+﻿<Window x:Class="Housing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Housing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="443" Width="643" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Views/pexels-tobias-bjørkli-2119714.jpg" Stretch="Fill"/>
+        </Grid.Background>
+        <Label Content="Welcome To Complex Assistant" HorizontalAlignment="Center" Margin="0,17,0,0" VerticalAlignment="Top" Width="372" FontSize="22" FontFamily="Bodoni MT Black" FontWeight="Normal"/>
+        <Label Content="What have you come to do?" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add Resident" HorizontalAlignment="Left" Margin="175,115,0,0" VerticalAlignment="Top" Width="127" Background="#FFCFCFCF" Height="102" FontSize="16" FontFamily="Arial Rounded MT Bold" Click="Button_Click"/>
+        <Button Content="Lodge Ticket" HorizontalAlignment="Left" Margin="338,115,0,0" VerticalAlignment="Top" Width="118" Background="#FFCFCFCF" Height="102" FontSize="16" FontFamily="Arial Rounded MT Bold" Click="Button_Click_1"/>
+        <Button Content="Check Ticket" HorizontalAlignment="Left" Margin="496,115,0,0" VerticalAlignment="Top" Width="118" Background="#FFCFCFCF" Height="102" FontSize="16" FontFamily="Arial Rounded MT Bold" Click="Button_Click_2"/>
+        <Label Content="Residents :" HorizontalAlignment="Left" Margin="56,99,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Management :" HorizontalAlignment="Left" Margin="56,227,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
+        <Button x:Name="tbComplaint" Content="View Tickets" HorizontalAlignment="Left" Margin="175,279,0,0" VerticalAlignment="Top" Width="127" Height="115" Background="#FFDDDDDD" FontSize="16" FontFamily="Arial Rounded MT Bold" Click="Button_Click_3"/>
+
+    </Grid>
+</Window>

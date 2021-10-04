@@ -1,0 +1,27 @@
+﻿<Window x:Class="Housing.Views.LodgeTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Housing.Views"
+        mc:Ignorable="d"
+        Title="LodgeTicket" Height="394" Width="546" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFC13B3B" Offset="0.413"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="txbUnitID" HorizontalAlignment="Left" Margin="176,74,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="22"/>
+        <RichTextBox x:Name="tbComplaint" Margin="176,124,101,119">
+            <FlowDocument>
+                <Paragraph/>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock HorizontalAlignment="Left" Margin="56,74,0,0" Text="Unit ID :" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,134,0,0" Text="Complaint :" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Foreground="White"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="204,314,0,0" VerticalAlignment="Top" Width="172" Height="25" Click="btnUpdate_Click"/>
+
+    </Grid>
+</Window>
